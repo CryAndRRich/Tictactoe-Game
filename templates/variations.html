@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/variations.css')}}">
+    <title>Tictactoe Game</title>
+    <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAOtSAICAgAAmJv8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwMgACAAAAAAMCAAIAAAAAMDIAAgAAAAAiIiIiIiAAAAACMDIREAAAAAIDAhAQAAAAAjAyERAAACIiIiIiIAAAERIAAjAwAAAQEgACAwAAABESAAIwMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA//8AANO/AADrvwAA078AAMAHAAD5BwAA+pcAAPkHAADABwAAw5cAANOvAADDlwAA//8AAP//AAD//wAA" rel="icon" type="image/x-icon">
+</head>
+<body>
+    <section class="information-form">
+        <h1 class="title">Welcome, {{ msg['player1'] }} and {{ msg['player2'] }}!<br>Please choose the variation you wanna play:</h1>
+        <section class="variation">
+            <img src="{{url_for('static', filename = 'img/basic.png')}}" onclick="changeRoute('basic')">
+            <p class="context"><strong>Basic Tictactoe</strong><br>A classic tic-tac-toe game with a 10x10 grid, alternating turns between X and O, where the first player to get 5 in a horizontal, vertical, or diagonal row wins</p>
+        </section>
+        <section class="variation">
+            <img src="{{url_for('static', filename = 'img/hexagonal.png')}}" onclick="changeRoute('hexagonal')">
+            <p class="context"><strong>Hexagonal Tictactoe</strong><br>A variation of tic-tac-toe game with hexagonal grids, where the first player to get 5 in a horizontal or diagonal row wins</p>
+        </section>
+        <section class="variation">
+            <img src="{{url_for('static', filename = 'img/3d.png')}}" onclick="changeRoute('qubic')">
+            <p class="context"><strong>3D Tictactoe - Qubic</strong><br>A variation of tic-tac-toe game with a 3x3x3 board, the winning row can be horizontal, vertical, or diagonal on a single board, or vertically in a column, or a diagonal line through four boards</p>
+        </section>
+    </section>
+
+    <script>
+        function changeRoute(path) {
+            const route = '/' + path;
+            window.location.href = route;
+        }
+    </script>
+</body>
+</html>
