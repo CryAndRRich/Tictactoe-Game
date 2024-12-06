@@ -1,5 +1,5 @@
 # Tic Tac Toe Game:
-This is the file that contains the JS files which implement the **functions of each variation**
+This is the file that contains the JS files which implement the **functions of each variation** (currently, there are 3 variations: basic, hexagonal grids and 3D board)
 
 **Note**: The JS code for all variations, were originally inspired by Jothin Kumar’s repository [tic-tac-toe](https://github.com/Jothin-kumar/tic-tac-toe). I then customized it to suit my purpose
 
@@ -54,3 +54,11 @@ For **3D version** (`qubic.js`), the function uses the **simplest** method to ch
 * playAgain(): A function to play another round and store past scores
 * resetGame(): A function to reset the game and clear all saved data
 * switchTheme(): A function to toggle between dark and light themes
+
+## Visual examples
+### Basic tictactoe
+![basic](https://github.com/CryAndRRich/Tictactoe-Game/blob/main/.github/demo_img3.jpg)
+### Hexagonal grids
+![hexagonal](https://github.com/CryAndRRich/Tictactoe-Game/blob/main/.github/demo_img4.jpg)
+### Qubic - 3D version (Dark Grid Mode)
+![qubic](https://github.com/CryAndRRich/Tictactoe-Game/blob/main/.github/demo_img5.jpg)
